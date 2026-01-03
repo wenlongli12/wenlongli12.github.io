@@ -9,391 +9,622 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+
+    <!-- Minimal page-level styling for consistency (safe to keep even with stylesheet.css) -->
+    <style>
+      .container {
+        width: 100%;
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+      .nav {
+        text-align: center;
+        margin: 6px 0 14px;
+        line-height: 1.8;
+      }
+      .nav a { text-decoration: none; }
+      .card {
+        padding: 14px 18px;
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 12px;
+        line-height: 1.65;
+        margin: 0 0 12px;
+      }
+      .card.placeholder {
+        border: 1px dashed rgba(0,0,0,0.15);
+        opacity: 0.92;
+      }
+      .muted {
+        opacity: 0.85;
+        font-size: 0.95em;
+      }
+      .section {
+        margin: 0 0 26px;
+      }
+      .section h2 {
+        margin: 0 0 10px;
+      }
+      .section h3 {
+        margin: 0 0 12px;
+      }
+      .mugstrip {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 14px;
+      }
+      .mugshot {
+        width: 110px;
+        height: 110px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid rgba(0,0,0,0.15);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .mugshot:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+      }
+      .publist {
+        margin: 0;
+        padding-left: 18px;
+        line-height: 1.85;
+      }
+      .footer-note {
+        text-align: right;
+        font-size: small;
+        margin-top: 18px;
+      }
+    </style>
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Wenlong Li
-                </p>
-                <p>
-		I'm a forthcoming Research Professor at <a href="https://www.zju.edu.cn/english/">Zhejiang University</a> in Hangzhou, China, and I specialise in data and AI regulation in transnational and global contexts.
-		I did my PhD at <a href="https://www.law.ed.ac.uk/">University of Edinburgh</a>, where I was advised by <a href="https://www.law.ed.ac.uk/people/dr-rachael-craufurd-smith">Dr Rachael Craufurd-Smith</a> and <a href="https://www.law.ed.ac.uk/people/dr-paolo-cavaliere">Dr Paolo Cavaliere</a>.
-	
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:fettes.lee@gmail.com">Email</a> &nbsp;/&nbsp;
-                  <a href="https://www.linkedin.com/in/wenlong-li-52976b78/">LinkedIn</a> &nbsp;/&nbsp;
-                  <a href="https://x.com/wlladragon">Twitter (inactive)</a> &nbsp;/&nbsp; 
-					<a href="https://scholar.google.com/citations?user=alQx-gUAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
-                </p>
-              </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/WenlongLi_ Hippocampus.jpeg"><img style="width:200px; height:200px; object-fit: cover; clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);" alt="profile photo" src="images/WenlongLi_ Hippocampus.jpeg" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <div class="container">
+
+      <!-- Header -->
+      <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;"><tbody>
+        <tr>
+          <td style="padding:0;">
+            <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;"><tbody>
               <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                  I'm interested in bridging legal and regulatory principles into complex operational contexts. Some papers are <span class="highlight">highlighted</span>.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+                <td style="padding:18px 0 6px;vertical-align:middle;">
+                  <p class="name" style="text-align:center;margin:0;">
+                    Wenlong Li
+                  </p>
 
+                  <p style="margin:10px auto 10px;max-width:760px;text-align:center;line-height:1.65;">
+                    I’m a Research Professor at <a href="https://www.zju.edu.cn/english/">Zhejiang University</a> in Hangzhou, China,
+                    and I specialise in data and AI regulation in transnational and global contexts.
+                    I did my PhD at <a href="https://www.law.ed.ac.uk/">the University of Edinburgh</a>, where I was advised by
+                    <a href="https://www.law.ed.ac.uk/people/dr-rachael-craufurd-smith">Dr Rachael Craufurd-Smith</a> and
+                    <a href="https://www.law.ed.ac.uk/people/dr-paolo-cavaliere">Dr Paolo Cavaliere</a>.
+                  </p>
 
-			  </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Annoucement</h2>
-                <p>
-                  I officially left Aston University as of 31 August 2025. My Aston University email address (w.li13@aston.ac.uk) will no longer be active after the end of September 2025. For academic or personal matters, please contact me at my current email: <strong>fettes.lee@gmail.com</strong> for now. My new official email at Zhejiang University will be available from early October 2025, and I will provide an update in due course.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-					
-      <td style="padding:16px;width:20%;vertical-align:middle">
-		  	<img src="images/FacialRecognition.gif" alt="clean-usnob" width="160" height="160">
-	  </td>
-        <a href="https://www.cambridge.org/core/journals/data-and-policy/article/from-wild-west-to-responsible-ai-testing-inthewild-lessons-from-live-facial-recognition-testing-by-law-enforcement-authorities-in-europe/3C1F920D9588C8872C195CE403AE3BDF">
-          <span class="papertitle">From ‘wild west’ to ‘responsible’ AI testing ‘in-the-wild’: lessons from live facial recognition testing by law enforcement authorities in Europe</span>
-        </a>
-        <br>
-        <a href="https://www.birmingham.ac.uk/staff/profiles/law/yeung-karen">Karen Yeung</a>,
-		<strong>Wenlong Li</strong>,
-        <br>
-        <em>Data & Policy</em>, 19 September2025
-        <br>
-        <p></p>
-        <p>
-		Deliverable of my postdoctoral project "Digital Experimentation in the Public Sector", with live trials of facial recognition technology across Europe as a revealing case in point. We make a dual contribution by analytically proposing a principled framework to govern responsible real-world AI testing, while empirically providing rich comparative case studies of live facial recognition trials by European law enforcement authorities. 
-        </p>
-      </td>
-    </tr>
+                  <p style="text-align:center;margin:0 0 8px;">
+                    <a href="mailto:fettes.lee@gmail.com">Email</a> &nbsp;/&nbsp;
+                    <a href="https://www.linkedin.com/in/wenlong-li-52976b78/">LinkedIn</a> &nbsp;/&nbsp;
+                    <a href="https://x.com/wlladragon">X (dormant)</a> &nbsp;/&nbsp;
+                    <a href="https://scholar.google.com/citations?user=alQx-gUAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
+                    <a href="https://orcid.org/0000-0002-2574-1847">ORCID</a>
+                  </p>
 
-    <tr onmouseout="ever_stop()" onmouseover="ever_start()">
-      <td style="padding:16px;width:20%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='ever_image'>
-					  <img src='images/ever_after.png' width=100%>
-					</div>
-          <img src='images/ever_before.png' width=100%>
+                  <div class="nav">
+                    <a href="#announcement">Announcement</a> ·
+                    <a href="#contact">Contact</a> ·
+                    <a href="#bio">Bio</a> ·
+                    <a href="#wip">Work in Progress</a> ·
+                    <a href="#publications">Publications</a> ·
+                    <a href="#other-writing">Other Selected Writing</a> ·
+                    <a href="#media">Media</a> ·
+                    <a href="#invited-talks">Invited Talks</a> ·
+                    <a href="#teaching">Teaching</a> ·
+                    <a href="#blog">Blogpost & Writing</a> ·
+                    <a href="#statement">Statement</a>
+                  </div>
+                </td>
+
+                <td style="padding:18px 0 6px;vertical-align:middle;width:220px;text-align:right;">
+                  <a href="images/WenlongLi_ Hippocampus.jpeg">
+                    <img
+                      style="width:200px;height:200px;object-fit:cover;clip-path:polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);"
+                      alt="profile photo"
+                      src="images/WenlongLi_ Hippocampus.jpeg">
+                  </a>
+                </td>
+              </tr>
+            </tbody></table>
+          </td>
+        </tr>
+      </tbody></table>
+
+      <!-- ANNOUNCEMENT -->
+      <section id="announcement" class="section">
+        <h2>ANNOUNCEMENT</h2>
+        <div class="card">
+          My previous email address at Aston University (<strong>w.li13@aston.ac.uk</strong>) is no longer in use.
         </div>
-        <script type="text/javascript">
-          function ever_start() {
-            document.getElementById('ever_image').style.opacity = "1";
-          }
+      </section>
 
-          function ever_stop() {
-            document.getElementById('ever_image').style.opacity = "0";
-          }
-          ever_stop()
-        </script>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <a href="https://half-potato.gitlab.io/posts/ever/">
-			<span class="papertitle">EVER: Exact Volumetric Ellipsoid Rendering for Real-time View Synthesis
-</span>
-        </a>
-        <br>
-				<a href="https://half-potato.gitlab.io/">Alexander Mai</a>, 
-				<a href="https://phogzone.com/">Peter Hedman</a>,
-				<a href="https://grgkopanas.github.io/">George Kopanas</a>,
-        <a href="https://dorverbin.github.io/">Dor Verbin</a>,
-        <a href="https://scholar.google.com/citations?user=ozNFrecAAAAJ&hl=en">David Futschik</a>,
-        <a href="https://xharlie.github.io/">Qiangeng Xu</a>,
-        <a href="https://jacobsschool.ucsd.edu/faculty/profile?id=253">Falko Kuester</a>,
-				<strong>Jonathan T. Barron</strong>,
-        <a href="https://www.zhangyinda.com/">Yinda Zhang</a>
-				<br>
-        <em>ICCV</em>, 2025 &nbsp <font color="red"><strong>(Oral Presentation)</strong></font>
-        <br>
-        <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
-        /
-        <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
-        <p></p>
-        <p>
-				Raytracing constant-density ellipsoids yields more accurate and flexible radiance fields than splatting Gaussians, and still runs in real-time.
-        </p>
-      </td>
-    </tr>
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <h2>CONTACT</h2>
 
-
-    <tr onmouseout="cat4d_stop()" onmouseover="cat4d_start()" bgcolor="#ffffd0">
-      <td style="padding:16px;width:20%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='cat4d_image'><video  width=100% height=100% muted autoplay loop>
-          <source src="images/cat4d.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/cat4d.jpg' width="160">
+        <div class="card">
+          <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;">
+            <tr>
+              <td style="vertical-align:top;width:50%;padding-right:14px;">
+                <p style="margin:0 0 6px;font-weight:600;">Office</p>
+                <p style="margin:0;">
+                  109, Building 1<br>
+                  Guanghua School of Law<br>
+                  Zhejiang University<br>
+                  51 Zhejiang Road<br>
+                  Hangzhou<br>
+                  Zhejiang<br>
+                  China<br>
+                  310008
+                </p>
+              </td>
+              <td style="vertical-align:top;width:50%;padding-left:14px;">
+                <p style="margin:0 0 6px;font-weight:600;">Mail</p>
+                <p style="margin:0 0 10px;">
+                  wenlong [dot] li [at] zju [dot] edu [dot] cn
+                </p>
+                <p style="margin:0 0 6px;font-weight:600;">Alt email</p>
+                <p style="margin:0;">
+                  fettes [dot] lee [at] gmail [dot] com
+                </p>
+              </td>
+            </tr>
+          </table>
         </div>
-        <script type="text/javascript">
-          function cat4d_start() {
-            document.getElementById('cat4d_image').style.opacity = "1";
-          }
+      </section>
 
-          function cat4d_stop() {
-            document.getElementById('cat4d_image').style.opacity = "0";
-          }
-          cat4d_stop()
-        </script>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <a href="https://cat-4d.github.io/">
-			<span class="papertitle">CAT4D: Create Anything in 4D with Multi-View Video Diffusion Models
-</span>
-        </a>
-        <br>
-				<a href="https://www.cs.columbia.edu/~rundi/">Rundi Wu</a>,
-				<a href="https://ruiqigao.github.io/">Ruiqi Gao</a>,
-				<a href="https://poolio.github.io/">Ben Poole</a>,
-				<a href="https://alextrevithick.github.io/">Alex Trevithick</a>,
-				<a href="https://www.cs.columbia.edu/~cxz/index.htm/">Changxi Zheng</a>,
-				<strong>Jonathan T. Barron</strong>,
-				<a href="https://holynski.org/">Aleksander Holynski</a>
-        <br>
-        <em>CVPR</em>, 2025 &nbsp <font color="red"><strong>(Oral Presentation)</strong></font>
-        <br>
-        <a href="https://cat-4d.github.io/">project page</a>
-        /
-        <a href="https://arxiv.org/abs/2411.18613">arXiv</a>
-        <p></p>
-        <p>
-				An approach for turning a video into a 4D radiance field that can be rendered in real-time. When combined with a text-to-video model, this enables text-to-4D.
+      <!-- BIO -->
+      <section id="bio" class="section">
+        <h2>BIO</h2>
+
+        <div class="card">
+          <p style="margin:0 0 12px;">
+            You can find my Zhejiang University faculty page
+            <a href="https://person.zju.edu.cn/en/wenlongli">here</a>.
+            For technical reasons, it has not yet been consistently indexed by major search engines; this is currently being addressed.
+          </p>
+
+          <p style="margin:0 0 12px;">
+            I’m a quasi-legal researcher at Zhejiang University, Guanghua School of Law. By ‘quasi’ I mean that I’ve increasingly
+            refrained from conducting black-letter conventional legal analysis type of work but rather consider me perhaps more of a
+            legal theorist and empiricist than conventional legal analyst. I won’t call myself a socio-legal or empirical researcher
+            because looking law thorugh the lens of social science methods is just one way of doing research that I like.
+          </p>
+
+          <p style="margin:0 0 12px;">
+            With an interdisciplinary heart and given that most critical and social analysis would have to consider interventions –
+            and law and public policy, I’m now more interested in considering how law responds to the techno-socio phenomenon –
+            with current focus on algorithmic addiction, model deletion, memorisation, real-world testing –
+          </p>
+
+          <p style="margin:0 0 12px;">
+            I’m a data protection lawyer by training, and have recently revitalised my interest in some foundational issues such as
+            transborder data flows – especially from EU to China and at a transnational level.
+          </p>
+
+          <p style="margin:0 0 12px;">
+            Before joining Zhejiang University, I also worked at Aston University as a Lecturer in AI law (2024-2025),
+            Interdisciplinary Research Fellow in Law, Ethics and Computer at University of Birmingham (working with Professor Karen Yeung and Professor Andrew Howes)
+            and doctoral researcher/guest lecturer at the University of Edinburgh (2016-2019).
+          </p>
+
+          <p style="margin:0 0 12px;">
+            In my research capacity, I previously worked full time at Tencent Research (2014-2015), Alibaba Research (2022-2023),
+            and TikTok’s Privacy and Data Protection Office (2023-2024).
+          </p>
+
+          <p style="margin:0 0 10px;">
+            Selected profiles:
+            <a href="https://www.cdcs.ed.ac.uk/about/wenlong-li">CDCS</a> ·
+            <a href="https://www.birmingham.ac.uk/news-archive/2020/behind-the-scenes-at-bls-wenlong-li">UoB profile</a> ·
+            <a href="https://research.aston.ac.uk/en/persons/wenlong-li-hehim/">Aston profile</a> ·
+            <a href="https://www.unesco.org/ethics-ai/en/ai-ethics-experts-without-borders/wenlong-li">UNESCO AI Ethics Without Borders</a> ·
+            <a href="https://www.ipie.info/scientists/wenlong-li">IPIE</a> ·
+            <a href="https://g20techpolicy.unesco.org/en/experts/wenlong-li">G20 Tech Policy</a> ·
+            <a href="https://brusselsprivacyhub.com/wenlong-li/">Brussels Privacy Hub</a> ·
+            <a href="https://www.law.ox.ac.uk/monroe-e-price-media-law-moot-court-competition/meet-price-moot-court-competition-international">Price Moot</a>
+          </p>
+
+          <p style="margin:0;">
+            Online:
+            <a href="https://www.linkedin.com/in/wenlong-li-52976b78/">LinkedIn</a> ·
+            <a href="https://wenlongli.substack.com/">Substack</a> ·
+            <a href="https://bsky.app/profile/wenlongli.bsky.social">Bluesky</a> ·
+            <a href="https://openreview.net/profile?id=%7EWenlong_Li5">OpenReview</a> ·
+            <a href="https://github.com/wenlongli12">GitHub</a> ·
+            <a href="https://scholar.google.com/citations?user=alQx-gUAAAAJ&hl=en">Google Scholar</a> ·
+            <a href="https://orcid.org/0000-0002-2574-1847">ORCID</a> ·
+            <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1918476">SSRN</a>
+          </p>
+
+          <div class="mugstrip">
+            <!-- Replace filenames with your actual images -->
+            <img src="images/mugshot-portrait.jpg" alt="Wenlong Li portrait" class="mugshot">
+            <img src="images/mugshot-conference.jpg" alt="Wenlong Li at conference" class="mugshot">
+            <img src="images/mugshot-panel.jpg" alt="Wenlong Li on panel" class="mugshot">
+          </div>
+
+          <hr style="border:none;border-top:1px solid rgba(0,0,0,0.08);margin:18px 0 16px;">
+
+          <p style="margin:0 0 8px;font-weight:600;">
+            Formal bio (for talks and programmes)
+          </p>
+
+          <!-- Incorporated verbatim -->
+          <p style="margin:0 0 12px;">
+            Wenlong joins Guanghua School of Law, Zhejiang University in November 2025 as a Research Professor. His research focuses on data and AI regulation in transnational contexts, with particular attention to cross-border data governance, AI standards and compliance architectures and the law of free speech in platform-mediated environments.
+          </p>
+          <p style="margin:0 0 12px;">
+            Before joining Zhejiang University, Wenlong moved between academic and industry in ways that his work folds together legal inquiry, public policy engagement and lived complexities of industry implementation. He held several academic posts in the United Kingdom, including the University of Edinburgh (Guest Lecturer and Editor of SCRIPTed, 2017-2022), the University of Birmingham (Interdisciplinary Research Fellow in Law, Ethics and Computer, 2020-2022) and Aston University (Lecturer/Assistant Professor in AI Law, tenure-track, 2024-2025). In parallel, Wenlong worked extensively across several leading global technology firms, including TikTok (Research Lead, Privacy & Data Protection Office, 2023-2024), Alibaba Research (Senior Researcher, Digital Economies & Public Policy, 2022-2023), and Tencent (Legal Researcher, 2014-2015).
+          </p>
+          <p style="margin:0 0 12px;">
+            Wenlong currently serves as an associate editor at International Data Privacy Law, member of the UNESCO’s AI Ethics without Borders, and Scientific Expert of the International Panel on the Information Environment.He also carries forward research affiliation with the Edinburgh Centre for Data, Culture & Society (CDCS) and co-edits the Future Law book series at Edinburgh University Press. Deeply committed to advocacy and discursive practice, Wenlong has remained involved in the Oxford Price International Media Law Moot Court Competition for over a decade, where he has taken on the roles of mooter, judge and coach.
+          </p>
+          <p style="margin:0;">
+            Wenlong completed his PhD in IT law at the University of Edinburgh, having previously undertaken his interdisciplinary LL.M. by Research (Law and Journalism) and LL.B. at the University of Political Science and Law (China).
+          </p>
+        </div>
+      </section>
+
+      <!-- WORK IN PROGRESS -->
+      <section id="wip" class="section">
+        <h2>WORK IN PROGRESS</h2>
+        <div class="card">
+          <ul class="publist">
+            <li>
+              <strong>Beyond Data Erasure: The EU’s Convoluted Approach to Model Deletion</strong>
+              (with Jingwu Zhao) —
+              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5794622" target="_blank" rel="noopener noreferrer">SSRN</a>
+            </li>
+            <li>
+              <strong>Algorithmic Registers: A Comparative Perspective between the UK and China</strong>
+              (with Yulu Pi and Jat Singh)
+            </li>
+            <li>
+              <strong>Facial Recognition Technology in Peaceful Public Protest</strong>
+              (with Paolo Cavaliere)
+            </li>
+            <li>
+              <strong>Conversational Privacy</strong>
+              (with Zihao Li)
+            </li>
+            <li>
+              <strong>Algorithmic Addiction by the Elderly</strong>
+              (with Yujun Xu)
+            </li>
+            <li>
+              <strong>Liability Distribution under AI-Specific Regulation: The Case of the EU AI Act</strong>
+              (with Jiahong Chen)
+            </li>
+            <li>
+              <strong>Is the SCC Dead for Data Transfers into China?</strong>
+              (with Ke Xu)
+            </li>
+            <li>
+              <strong>Is That a Transfer? Reassessing Article 3 and Chapter V GDPR in the Era of Extraterritorial Processing</strong>
+            </li>
+          </ul>
+          <p class="muted" style="margin:12px 0 0;">
+            These projects are at different stages of development, ranging from early conceptual work to active drafting and review.
+          </p>
+        </div>
+      </section>
+
+      <!-- PUBLICATIONS (SELECTED) -->
+      <section id="publications" class="section">
+        <h2>PUBLICATIONS (SELECTED)</h2>
+
+        <!-- 2026 -->
+        <section id="pubs-2026" class="section" style="margin-top:0;">
+          <h3>2026 (forthcoming)</h3>
+
+          <div class="card">
+            <p style="margin:0 0 6px;">
+              <strong>Li, Wenlong</strong>, Zhang, Yueming, Zheng, Qingqing &amp; Li, Aolan.
+              <span class="papertitle">
+                How the Legal Basis for AI Training Is Framed in Data Protection Guidelines and Interventions:
+                Comparative Perspectives and the Prospect of Global Convergence
+              </span>.
+            </p>
+            <p style="margin:0;">
+              <em>International Data Privacy Law</em> (accepted; forthcoming 2026).
+            </p>
+          </div>
+
+          <div class="card">
+            <p style="margin:0 0 6px;">
+              <strong>Li, Wenlong</strong>.
+              <span class="papertitle">
+                Shoppertainment: How Live Shopping Rewrites the Foundations of E-Commerce Law
+              </span>.
+            </p>
+            <p style="margin:0;">
+              In Rothchild, John (ed), <em>Handbook on E-Commerce Law</em>, 2nd edn. Edward Elgar Publishing (forthcoming 2026).
+            </p>
+          </div>
+
+          <div class="card">
+            <p style="margin:0 0 6px;">
+              <strong>Li, Wenlong</strong>.
+              <span class="papertitle">Privacy and Economic Development</span>.
+            </p>
+            <p style="margin:0;">
+              In van Brakel, Rosamunde, Steeves, Valerie &amp; Murakami Wood, David (eds),
+              <em>Encyclopedia on Privacy and Surveillance</em> (forthcoming 2026).
+            </p>
+          </div>
+        </section>
+
+        <!-- 2025 -->
+        <section id="pubs-2025" class="section" style="margin-top:0;">
+          <h3>2025</h3>
+
+          <div class="card">
+            <p style="margin:0 0 6px;">
+              <strong>Li, Wenlong</strong> (2025).
+              <span class="papertitle">
+                Accountability and Attribution in AI-Generated Content Authentication: Lessons from China’s AI Content Labelling Mandate
+              </span>.
+            </p>
+            <p style="margin:0;">
+              <em>The Paris Journal on AI &amp; Digital Ethics</em>, No. 1, November 2025.
+            </p>
+          </div>
+
+          <div class="card">
+            <p style="margin:0 0 6px;">
+              Yeung, Karen &amp; <strong>Li, Wenlong</strong> (2025).
+              <span class="papertitle">
+                From ‘wild west’ to ‘responsible’ AI testing ‘in-the-wild’: lessons from live facial recognition testing by law enforcement authorities in Europe
+              </span>.
+            </p>
+            <p style="margin:0 0 6px;">
+              <em>Data &amp; Policy</em>, 7, e59.
+            </p>
+            <p style="margin:0;font-size:0.95em;">
+              <a href="https://doi.org/10.1017/dap.2025.10019">DOI</a>
+            </p>
+          </div>
+        </section>
+
+        <!-- 2024 -->
+        <section id="pubs-2024" class="section" style="margin-top:0;">
+          <h3>2024</h3>
+
+          <div class="card">
+            <p style="margin:0 0 6px;">
+              <strong>Li, Wenlong</strong> &amp; Yang, Dan (2024).
+              <span class="papertitle">
+                Decentralized but Coordinated: Probing Polycentricity in EU Data Protection Cross-border Enforcement
+              </span>.
+            </p>
+            <p style="margin:0;">
+              In <em>Global Digital Data Governance: Polycentric Perspectives</em> (1st ed.). Routledge, pp. 105–124.
+            </p>
+          </div>
+
+          <div class="card">
+            <p style="margin:0 0 6px;">
+              <strong>Li, Wenlong</strong> (2024).
+              <span class="papertitle">
+                Book Review: Regulating Online Behavioural Advertising through Data Protection Law
+              </span>.
+            </p>
+            <p style="margin:0 0 6px;">
+              <em>European Data Protection Law Review</em>, 10(2), 240–242.
+            </p>
+            <p style="margin:0;font-size:0.95em;">
+              <a href="https://doi.org/10.21552/edpl/2024/2/17">DOI</a>
+            </p>
+          </div>
+
+          <div class="card">
+            <p style="margin:0 0 6px;">
+              <strong>Li, Wenlong</strong> &amp; Toh, Jill (2024).
+              <span class="papertitle">
+                Data Subject Rights as a Tool for Platform Worker Resistance: Lessons from the Uber/Ola Judgments
+              </span>.
+            </p>
+            <p style="margin:0;">
+              In Matsumi, Hallinan, Dimitrova, Kosta &amp; De Hert (eds),
+              <em>Data Protection and Privacy, Volume 15: In Transitional Times</em>, pp. 119–156.
+            </p>
+          </div>
+        </section>
+
+        <!-- 2023 -->
+        <section id="pubs-2023" class="section" style="margin-top:0;">
+          <h3>2023</h3>
+
+          <div class="card">
+            <p style="margin:0 0 6px;">
+              Xu, Yujun &amp; <strong>Li, Wenlong</strong> (2023).
+              <span class="papertitle">
+                The Causes and Prevention of Commercial Contract Cheating in the Era of Digital Education: A Systematic and Critical Review
+              </span>.
+            </p>
+            <p style="margin:0 0 6px;">
+              <em>Journal of Academic Ethics</em>, 21, 303–321.
+            </p>
+            <p style="margin:0;font-size:0.95em;">
+              <a href="https://doi.org/10.1007/s10805-022-09457-1">DOI</a>
+            </p>
+          </div>
+        </section>
+
+        <!-- 2022 -->
+        <section id="pubs-2022" class="section" style="margin-top:0;">
+          <h3>2022</h3>
+
+          <div class="card">
+            <p style="margin:0 0 6px;">
+              <strong>Li, Wenlong</strong> (2022).
+              <span class="papertitle">
+                Between Incrementalism and Revolution: How the GDPR Right to Data Portability Is Revamped by the EU and the UK Post-Brexit
+              </span>.
+            </p>
+            <p style="margin:0 0 6px;">
+              In Kosta, Leenes &amp; Kamara (eds), <em>Research Handbook on EU Data Protection Law</em>, pp. 572–599.
+              Edward Elgar Publishing.
+            </p>
+            <p style="margin:0;font-size:0.95em;">
+              <a href="https://doi.org/10.4337/9781800371682.00031">DOI</a>
+            </p>
+          </div>
+        </section>
+
+        <!-- 2019 -->
+        <section id="pubs-2019" class="section" style="margin-top:0;">
+          <h3>2019</h3>
+
+          <div class="card">
+            <p style="margin:0 0 6px;">
+              <strong>Li, Wenlong</strong> (2019).
+              <span class="papertitle">
+                Navigating the Right to Data Portability in the EU GDPR
+              </span>.
+            </p>
+            <p style="margin:0 0 6px;">
+              <em>Privacy Law &amp; Business International Report</em>, August 2019.
+            </p>
+            <p style="margin:0;font-size:0.95em;">
+              <a href="https://www.privacylaws.com/media/2713/li.pdf">PDF</a>
+            </p>
+          </div>
+        </section>
+
+        <!-- 2018 -->
+        <section id="pubs-2018" class="section" style="margin-top:0;">
+          <h3>2018</h3>
+
+          <div class="card">
+            <p style="margin:0 0 6px;">
+              <strong>Li, Wenlong</strong> (2018).
+              <span class="papertitle">
+                A Tale of Two Rights: Exploring the Potential Conflict Between the Right to Data Portability and the Right to Be Forgotten under the General Data Protection Regulation
+              </span>.
+            </p>
+            <p style="margin:0 0 6px;">
+              <em>International Data Privacy Law</em>, 8(4), 309–317.
+            </p>
+            <p style="margin:0;font-size:0.95em;">
+              <a href="https://doi.org/10.1093/idpl/ipy007">DOI</a>
+            </p>
+          </div>
+        </section>
+
+        <!-- Full record box -->
+        <div class="card" style="border-style:dashed;border-color:rgba(0,0,0,0.15);">
+          <p style="margin:0 0 8px;font-weight:600;">
+            Full publication record &amp; repositories
+          </p>
+          <p style="margin:0 0 8px;">
+            A complete and up-to-date list of my academic outputs can be found via
+            <a href="https://scholar.google.com/citations?user=alQx-gUAAAAJ&hl=en">Google Scholar</a>
+            and
+            <a href="https://orcid.org/0000-0002-2574-1847">ORCID</a>.
+            Preprints, working papers, and supplementary materials are also available through
+            <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1918476">SSRN</a>,
+            <a href="https://arxiv.org/">arXiv</a>,
+            <a href="https://osf.io/">OSF</a>,
+            and related repositories.
+          </p>
+          <p style="margin:0;">
+            Additional profiles:
+            <a href="https://openreview.net/profile?id=%7EWenlong_Li5">OpenReview</a> ·
+            <a href="https://github.com/wenlongli12">GitHub</a>
+          </p>
+        </div>
+
+      </section>
+
+      <!-- OTHER SELECTED WRITING -->
+      <section id="other-writing" class="section">
+        <h2>OTHER SELECTED WRITING</h2>
+        <div class="card">
+          <ul class="publist">
+            <li>
+              <strong>Authorities to the Left, (German) Courts to the Right:</strong>
+              The Politics and Law of Transborder Data Transfers in the EU.
+              <em>IAPP op-ed</em>.
+            </li>
+            <li>
+              <strong>GDPR Enforcement Trends for Companies in All Sectors.</strong>
+              <em>Privacy Law &amp; Business International Report</em>, with Yueming Zhang, October 2025.
+            </li>
+            <li>
+              <strong>Visualising GDPR Fines.</strong>
+              <em>Tech Leviathan</em>, on Substack.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- MEDIA (placeholder) -->
+      <section id="media" class="section">
+        <h2>MEDIA</h2>
+        <div class="card placeholder">
+          Media appearances, interviews, and commentary will be listed here. This section will be updated in due course.
+        </div>
+      </section>
+
+      <!-- INVITED TALKS (placeholder) -->
+      <section id="invited-talks" class="section">
+        <h2>INVITED TALKS</h2>
+        <div class="card placeholder">
+          A selection of invited talks, panels, and keynote presentations will be documented here.
+        </div>
+      </section>
+
+      <!-- TEACHING & SYLLABI (placeholder) -->
+      <section id="teaching" class="section">
+        <h2>TEACHING &amp; SYLLABI</h2>
+        <div class="card placeholder">
+          Information on courses taught, teaching philosophy, and selected syllabi will be made available here.
+        </div>
+      </section>
+
+      <!-- BLOGPOST & WRITING (placeholder) -->
+      <section id="blog" class="section">
+        <h2>BLOGPOST &amp; WRITING</h2>
+        <div class="card placeholder">
+          Blogposts and other writing will be archived here. This section will be updated in due course.
+        </div>
+      </section>
+
+      <!-- STATEMENT -->
+      <section id="statement" class="section">
+        <h2>STATEMENT</h2>
+
+        <div class="card">
+          <p style="margin:0 0 10px;">
+            Unless otherwise stated, the views expressed on this site are my own.
+            Please contact me if you would like to reuse any material.
+          </p>
+          <p style="margin:0;">
+            &copy; <span id="year"></span> Wenlong Li.
+          </p>
+        </div>
+
+        <p class="footer-note">
+          Hat tip to <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron</a>.
         </p>
-      </td>
-    </tr>
+      </section>
 
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src="images/B3DO.jpg" alt="b3do" width="160" style="border-style: none">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://drive.google.com/file/d/1_S8EQyngbHQrB415o0XkQ4V9SMzdEgWT/view?usp=sharing">
-                  <span class="papertitle">A Category-Level 3-D Object Dataset: Putting the Kinect to Work</span>
-                </a>
-                <br>
-                <a href="http://www.eecs.berkeley.edu/%7Eallie/">Allison Janoch</a>,
-                <a href="http://sergeykarayev.com/">Sergey Karayev</a>,
-                <a href="http://www.eecs.berkeley.edu/%7Ejiayq/">Yangqing Jia</a>,
-                <strong>Jonathan T. Barron</strong>,
-                <a href="http://www.cs.berkeley.edu/%7Emfritz/">Mario Fritz</a>,
-                <a href="http://www.icsi.berkeley.edu/%7Esaenko/">Kate Saenko</a>,
-                <a href="http://www.eecs.berkeley.edu/%7Etrevor/">Trevor Darrell</a>
-                <br>
-                <em>ICCV 3DRR Workshop</em>, 2011
-                <br>
-                <a href="data/B3DO_ICCV_2011.bib">bibtex</a> /
-                <a href="https://drive.google.com/file/d/1qf4-U5RhSw12O7gzQwW66SMQhs2FWYDW/view?usp=sharing">"smoothing" code</a>
-                <p>We present a large RGB-D dataset of indoor scenes and investigate ways to improve object detection using depth information.</p>
-              </td>
-            </tr>
+      <script>
+        // Auto-fill current year for the footer statement
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
 
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src="images/safs.jpg" alt="safs_small" width="160" height="160" style="border-style: none">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://drive.google.com/file/d/1EZTOO5xezLYcyIFgAzs4KuZFLbTcwTDH/view?usp=sharing">
-                  <span class="papertitle">High-Frequency Shape and Albedo from Shading using Natural Image Statistics</span>
-                </a>
-                <br>
-                <strong>Jonathan T. Barron</strong>, <a href="http://www.cs.berkeley.edu/~malik/">Jitendra Malik</a>
-                <br>
-                <em>CVPR</em>, 2011
-                <br>
-                <a href="data/BarronMalikCVPR2011.bib">bibtex</a>
-                <p>This paper is subsumed by <a href="#SIRFS">SIRFS</a>.</p>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src="images/fast_texture.jpg" alt="fast-texture" width="160" height="160">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://drive.google.com/file/d/1rc05NatkQVmUDlGCAYcHSrvAzTpU9knT/view?usp=sharing">
-                  <span class="papertitle">Discovering Efficiency in Coarse-To-Fine Texture Classification</span>
-                </a>
-                <br>
-                <strong>Jonathan T. Barron</strong>, <a href="http://www.cs.berkeley.edu/~malik/">Jitendra Malik</a>
-                <br>
-                <em>Technical Report</em>, 2010
-                <br>
-                <a href="data/BarronTR2010.bib">bibtex</a>
-                <p>A model and feature representation that allows for sub-linear coarse-to-fine semantic segmentation.
-                </p>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src="images/prl.jpg" alt="prl" width="160" height="160">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://drive.google.com/file/d/13rVuJpcytRdLYCnKpq46g7B7IzSrPQ2P/view?usp=sharing">
-                  <span class="papertitle">Parallelizing Reinforcement Learning</span>
-                </a>
-                <br>
-                <strong>Jonathan T. Barron</strong>, <a href="http://www.eecs.berkeley.edu/~dsg/">Dave Golland</a>, <a href="http://www.cs.berkeley.edu/~nickjhay/">Nicholas J. Hay</a>
-                <br>
-                <em>Technical Report</em>, 2009
-                <br>
-                <a href="data/BarronPRL2009.bib">bibtex</a>
-                <p>Markov Decision Problems which lie in a low-dimensional latent space can be decomposed, allowing modified RL algorithms to run orders of magnitude faster in parallel.</p>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src="images/bd_promo.jpg" alt="blind-date" width="160" height="160">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://drive.google.com/file/d/1PQjzKgFcrAesMIDJr-WDlCwuGUxZJZwO/view?usp=sharing">
-                  <span class="papertitle">Blind Date: Using Proper Motions to Determine the Ages of Historical Images</span>
-                </a>
-                <br>
-                <strong>Jonathan T. Barron</strong>, <a href="http://cosmo.nyu.edu/hogg/">David W. Hogg</a>, <a href="http://www.astro.princeton.edu/~dstn/">Dustin Lang</a>, <a href="http://cs.nyu.edu/~roweis/">Sam Roweis</a>
-                <br>
-                <em>The Astronomical Journal</em>, 136, 2008
-                <p>Using the relative motions of stars we can accurately estimate the date of origin of historical astronomical images.</p>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src="images/clean_promo.jpg" alt="clean-usnob" width="160" height="160">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://drive.google.com/file/d/1YvRx-4hrZoCk-nl6OgVJZlHAqOiN5hWq/view?usp=sharing">
-                  <span class="papertitle">Cleaning the USNO-B Catalog Through Automatic Detection of Optical Artifacts</span>
-                </a>
-                <br>
-                <strong>Jonathan T. Barron</strong>, <a href="http://stumm.ca/">Christopher Stumm</a>, <a href="http://cosmo.nyu.edu/hogg/">David W. Hogg</a>, <a href="http://www.astro.princeton.edu/~dstn/">Dustin Lang</a>, <a href="http://cs.nyu.edu/~roweis/">Sam Roweis</a>
-                <br>
-                <em>The Astronomical Journal</em>, 135, 2008
-                <p>We use computer vision techniques to identify and remove diffraction spikes and reflection halos in the USNO-B Catalog.</p>
-                <p>In use at <a href="http://www.astrometry.net">Astrometry.net</a></p>
-              </td>
-            </tr>
-
-          </tbody></table>
-
-          
-					<table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
-            <tr>
-              <td>
-                <h2>Miscellanea</h2>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            
-           
-            <tr>
-              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
-						     <div class="colored-box" style="background-color: #fcb97d;">
-								 <h2>Micropapers</h2>
-								 </div>
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://arxiv.org/abs/2112.11687">Squareplus: A Softplus-Like Algebraic Rectifier</a>
-                <br>
-                <a href="https://arxiv.org/abs/2010.09714">A Convenient Generalization of Schlick's Bias and Gain Functions</a>
-                <br>
-                <a href="https://arxiv.org/abs/1704.07483">Continuously Differentiable Exponential Linear Units</a>
-                <br>
-                <a href="https://jonbarron.info/data/cvpr2023_llm_workshop_annotated.pdf">Scholars & Big Models: How Can Academics Adapt?</a>
-              </td>
-            </tr>
-
-
-            <tr>
-              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
-						     <div class="colored-box" style="background-color: #aaba9e;">
-								 <h2>Recorded Talks</h2>
-								 </div>
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:center">
-                <a href="https://www.youtube.com/watch?v=hFlF33JZbA0">Radiance Fields and the Future of Generative Media, 2025</a><br>				  
-                <a href="https://www.youtube.com/watch?v=h9vq_65eDas">View Dependent Podcast, 2024</a><br>
-                <a href="https://www.youtube.com/watch?v=4tDhYsFuEqo">Bay Area Robotics Symposium, 2023
-</a><br>
-                <a href="https://youtu.be/TvWkwDYtBP4?t=7604">EGSR Keynote, 2021</a><br>
-				<a href="https://www.youtube.com/watch?v=nRyOzHpcr4Q">TUM AI Lecture Series, 2020</a><br>
-				<a href="https://www.youtube.com/watch?v=HfJpQCBTqZs">Vision & Graphics Seminar at MIT, 2020</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
-						     <div class="colored-box" style="background-color: #c6b89e;">
-								 <h2>Academic Service</h2>
-								 </div>
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:center">
-                <a href="https://iccv.thecvf.com/">Lead Area Chair, ICCV 2025</a>
-                <br>
-                <a href="https://cvpr.thecvf.com/Conferences/2025/Organizers">Lead Area Chair, CVPR 2025</a>
-                <br>
-                <a href="https://cvpr.thecvf.com/Conferences/2024/Organizers">Area Chair, CVPR 2024</a>
-                <br>
-                <a href="https://cvpr2023.thecvf.com/Conferences/2023/Organizers">Demo Chair, CVPR 2023</a>
-                <br>
-                <a href="https://cvpr2022.thecvf.com/area-chairs">Area Chair, CVPR 2022</a>
-                <br>
-                <a href="http://cvpr2021.thecvf.com/area-chairs">Area Chair & Award Committee Member, CVPR 2021</a>
-                <br>
-                <a href="http://cvpr2019.thecvf.com/area_chairs">Area Chair, CVPR 2019</a>
-                <br>
-                <a href="http://cvpr2018.thecvf.com/organizers/area_chairs">Area Chair, CVPR 2018</a>
-              </td>
-            </tr>
-						
-						
-           
-            <tr>
-              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
-						     <div class="colored-box" style="background-color: #edd892;">
-								 <h2>Teaching</h2>
-								 </div>
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:center">
-                <a href="http://inst.eecs.berkeley.edu/~cs188/sp11/announcements.html">Graduate Student Instructor, CS188 Spring 2011</a>
-                <br>
-                <a href="http://inst.eecs.berkeley.edu/~cs188/fa10/announcements.html">Graduate Student Instructor, CS188 Fall 2010</a>
-                <br>
-                <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd Edition</a>
-              </td>
-            </tr>
-            
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:right;font-size:small;">
-                  Hat tip to <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron</a>.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-        </td>
-      </tr>
-    </table>
+    </div>
   </body>
 </html>
